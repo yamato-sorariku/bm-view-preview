@@ -23,12 +23,17 @@ macOSおよびLinux (Ubuntu)のNode.js v20での動作を確認しています�
 $ cat > bm-view-preview.config.json
 {
   "baseUrl": "https://{your_tenant}.basemachina.com/projects/{your_project_id}/environments/{your_environment_id}",
-  "sourceDir": "./dist"
+  "sourceDir": "./dist",
+  "availableEnvironments": [
+      '許可する環境ID',
+      '許可する環境ID',
+  ]
 }
 ```
 
 - `baseUrl`: ビュー機能のプレビューを実行する環境のURLを指定してください。
 - `sourceDir`: プレビューするファイルのあるディレクトリのパスを指定してください。設定ファイルからの相対パスが使えます。
+- `availableEnvironments`: ローカル環境で許可する環境ID。 設定した場合、この環境ID以外の環境IDを選択しても `baseUrl` へリダイレクトします。
 
 ### 起動方法
 
