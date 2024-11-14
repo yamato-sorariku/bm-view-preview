@@ -24,7 +24,7 @@ $ cat > bm-view-preview.config.json
 {
   "baseUrl": "https://{your_tenant}.basemachina.com/projects/{your_project_id}/environments/{your_environment_id}",
   "sourceDir": "./dist",
-  "availableEnvironments": [
+  "allowedEnvironments": [
       '許可する環境ID',
       '許可する環境ID',
   ]
@@ -33,7 +33,7 @@ $ cat > bm-view-preview.config.json
 
 - `baseUrl`: ビュー機能のプレビューを実行する環境のURLを指定してください。
 - `sourceDir`: プレビューするファイルのあるディレクトリのパスを指定してください。設定ファイルからの相対パスが使えます。
-- `availableEnvironments`: ローカル環境で許可する環境ID。 設定した場合、この環境ID以外の環境IDを選択しても `baseUrl` へリダイレクトします。
+- `allowedEnvironments`: ローカル環境で許可する環境ID。 設定した場合、この環境ID以外の環境IDを選択しても `baseUrl` へリダイレクトします。
 
 ### 起動方法
 
